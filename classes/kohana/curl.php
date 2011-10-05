@@ -62,7 +62,7 @@ class Kohana_Curl {
         }
          
         
-        $config = Kohana::config('curl.'.$config_entry);
+        $config = Kohana::$config->load('curl.'.$config_entry);
         
         $this->instance = curl_init();
         
